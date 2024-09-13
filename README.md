@@ -1,6 +1,6 @@
 # jumblerton
 
-![jumblertron ui](https://github.com/j-p-higgins/jumblertron/mater/jumblertron.png?raw=true)
+![jumblertron ui](jumblertron.png?raw=true)
 
 A frontend for the 2d.wave max object with some nice quality of life features aimed at jumbling up breakbeats.
 
