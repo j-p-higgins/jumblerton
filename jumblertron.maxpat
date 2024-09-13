@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 593.0, 191.0, 771.0, 688.0 ],
+		"rect" : [ 1058.0, 250.0, 771.0, 688.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 2916.0, 984.0, 41.0, 22.0 ],
+					"text" : "sel 32"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "int", "int", "int" ],
+					"patching_rect" : [ 2916.0, 959.0, 50.5, 22.0 ],
+					"text" : "key"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"hint" : "Produces random patterns with looping. Note changes in this section won't take place until the next looped pattern is generated.",
 					"id" : "obj-245",
@@ -509,7 +533,7 @@
 			}
 , 			{
 				"box" : 				{
-					"hint" : "Punch In: Starts recording on the downbeat of the next loop from the random looper. Record Sync: adds a third channel to the wav file with an audio clock synced to the clocked random for manual syncing in DAW. With this option enabled you can also click the point of interest button to add a sine burst to the clock channel to mark interesting moments.",
+					"hint" : "Punch In: Starts recording on the downbeat of the next loop from the random looper. Record Sync: adds a third channel to the wav file with an audio clock synced to the clocked random for manual syncing in DAW. With this option enabled you can also click the point of interest button (or press spacebar) to add a sine burst to the clock channel to mark interesting moments.",
 					"id" : "obj-58",
 					"maxclass" : "hint",
 					"numinlets" : 1,
@@ -3611,6 +3635,7 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-271",
+					"knobcolor" : [ 0.552941176470588, 0.470588235294118, 0.647058823529412, 1.0 ],
 					"maxclass" : "slider",
 					"numinlets" : 1,
 					"numoutlets" : 1,
@@ -4191,6 +4216,7 @@
 			}
 , 			{
 				"box" : 				{
+					"bgcolor" : [ 0.2, 0.2, 0.2, 1.0 ],
 					"bgoncolor" : [ 0.501960784313725, 0.047058823529412, 0.047058823529412, 1.0 ],
 					"id" : "obj-149",
 					"maxclass" : "textbutton",
@@ -4313,14 +4339,14 @@
 				"box" : 				{
 					"fontface" : 0,
 					"id" : "obj-120",
-					"linecount" : 6,
+					"linecount" : 25,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 2366.0, 844.5, 33.0, 89.0 ],
+					"patching_rect" : [ 2366.0, 844.5, 33.0, 351.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 532.0, 462.0, 1503.0, 20.0 ],
-					"text" : "Filepath: D:/Desktop/",
+					"text" : "Filepath: D:/OneDrive/OneDrive - Morley College London/personal/Music/Composition/cam/04/",
 					"textcolor" : [ 0.466666666666667, 0.396078431372549, 0.545098039215686, 1.0 ]
 				}
 
@@ -4537,7 +4563,7 @@
 					"patching_rect" : [ 2309.0, 936.5, 185.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 602.0, 484.0, 107.0, 22.0 ],
-					"text" : "jumbled"
+					"text" : "distortion"
 				}
 
 			}
@@ -4556,12 +4582,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-62",
+					"linecount" : 9,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 2271.0, 814.5, 71.0, 22.0 ],
-					"text" : "D:/Desktop/"
+					"patching_rect" : [ 2271.0, 814.5, 71.0, 133.0 ],
+					"text" : "\"D:/OneDrive/OneDrive - Morley College London/personal/Music/Composition/cam/04/\""
 				}
 
 			}
@@ -5095,6 +5122,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-40", 0 ],
 					"source" : [ "obj-1", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"source" : [ "obj-10", 0 ]
 				}
 
 			}
@@ -6999,6 +7033,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-39", 0 ],
 					"source" : [ "obj-49", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-10", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}
